@@ -9,3 +9,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 class BaseClass:
     pass
 
+@pytest.mark.usefixtures("url")
+class CurrentUrl:
+    pass
+
+

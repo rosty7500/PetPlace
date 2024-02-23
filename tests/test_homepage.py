@@ -28,4 +28,3 @@ class Test_MenuLinks(BaseClass):
             print("Assert error")
 
 
-

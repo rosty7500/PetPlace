@@ -9,7 +9,6 @@ def setup(request):
     driver = webdriver.Chrome(service=service_ojb)
     #driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
     driver.get("https://www.petplace.com/")
-    print(driver.title)
     driver.maximize_window()
     request.cls.driver = driver
     yield
