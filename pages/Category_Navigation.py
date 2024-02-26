@@ -1,9 +1,9 @@
 from selenium.common import StaleElementReferenceException
 from selenium.webdriver.common.by import By
-from utilities.BaseClass import BaseClass
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from pages.HomePage import HomePage
+import fileinput
+
 
 
 class Category_Navigation:
@@ -19,14 +19,16 @@ class Category_Navigation:
         except StaleElementReferenceException:
             pass
 
+
     def append_page_no_url(self):
         f_url = self.driver.current_url
-        l_number = [5, 20, 40, 50]
+        page_number = [5, 20, 40, 50]
         url = f_url[:f_url.rfind('2')]
-        for page_num in l_number:
+        for page_num in page_number:
             c_url = url + str(page_num)
             print(c_url)
             self.driver.get(c_url)
+
 
 
 
